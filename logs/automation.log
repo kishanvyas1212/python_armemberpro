@@ -1,0 +1,70 @@
+2024-08-27 21:35:14,345:INFO:Starting test automation
+2024-08-27 21:35:14,345:INFO:reading test cases from excel file
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 0
+2024-08-27 21:35:16,400:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:35:16,400:INFO:executing the case id : 16
+2024-08-27 21:35:16,400:INFO:Initiating the wev driver
+2024-08-27 21:35:27,675:INFO:calling function according the test casse id: 16
+2024-08-27 21:46:14,111:INFO:Starting test automation
+2024-08-27 21:46:14,111:INFO:reading test cases from excel file
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 0
+2024-08-27 21:46:14,444:INFO:Function testcase_0 does not exist or is not callable.
+2024-08-27 21:46:14,444:INFO:executing the case id : 16
+2024-08-27 21:46:14,444:INFO:Initiating the wev driver
+2024-08-27 21:46:20,668:INFO:calling function according the test casse id: 16
