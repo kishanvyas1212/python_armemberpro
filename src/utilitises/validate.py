@@ -1,3 +1,4 @@
+import logging
 from src.cases.constants import *
 from src.utilitises.get_element import get_element as ge
  
@@ -97,6 +98,7 @@ class validate:
         elif not(coupon > 0):
             couponamount=round(0,1)
             print("inside not coupon")
+            logging.info("inside not coupon")
             if tax>0 and istax==2:
                 taxamount = round(plan_amount * tax/100,1)
                 payableamount = round(plan_amount + taxamount,1)

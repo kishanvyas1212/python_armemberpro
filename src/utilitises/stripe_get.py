@@ -38,7 +38,7 @@ def get_subscription_amount(charge_id):
     price = stripe.Price.retrieve(price_id)
 
     # Get the subscription amount
-    amount = price['unit_amount']
+    amount = price['unit_amount']/100
 
     print(f"Plan ID: {price_id}")
     print(f"Amount: {amount/100} {price['currency'].upper()}")  # Amount is in cents

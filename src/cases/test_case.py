@@ -237,6 +237,8 @@ def testcase_10(drivers,checkcoupon=0,coupon=0,tax=0,istax=0,sub=0,id=""):
     ge.findelement(drivers,"NAME","user_pass","send_keys",username)
     if sub==1:
         ge.findelement(driver=drivers,locator="id",locatorpath=id,action="click")
+        
+        
     if checkcoupon==1:
         ge.findelement(drivers,"name","arm_coupon_code",action="send_keys",value=coupon_code)
         ge.findelement(drivers,"xpath",'//*[@id="arm_setup_coupon_button_container"]/button',action="click")
@@ -247,8 +249,10 @@ def testcase_10(drivers,checkcoupon=0,coupon=0,tax=0,istax=0,sub=0,id=""):
         
         # validate.validate_summery(drivers,plan_amount,coupon,tax,istax)
     
-    
+    time.sleep(2)
+    logging.info("Clicking on the submit button")
     ge.findelement(driver=drivers,locator="name",locatorpath="ARMSETUPSUBMIT",action="click")
+    logging.info("the submit button clicked properly")
     time.sleep(5)
     ge.getinto_iframe(driver=drivers,locator="xpath",locatorpath="//iframe[@title='Secure card number input frame']")
     ge.findelement(driver=drivers,locator="name",locatorpath="cardnumber",action="click")
@@ -339,8 +343,10 @@ def testcase_16(drivers):
     logging.info(f"Result form payment {result}")
     logging.info(f"second parameter form payment {test}")
     # This is for checking the subscription created amount
-    result1,created_sub_amount = validate.varify_subscription_amount(test)
+    result1,created_sub_amount = validate.varify_subscription_amount(test,plan_amount)
     compressive_result = result + result1
+    logging.info(f"Result form payment {result1}")
+    logging.info(f"second parameter form payment {created_sub_amount}")
     return result,created_sub_amount
 
 
