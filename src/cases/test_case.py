@@ -221,11 +221,14 @@ def testcase_8(drivers):
     print(error_msg)
     return "tested and works","testing"
     
-def testcase_10(drivers,checkcoupon=0,coupon=0,tax=0,istax=0,sub=0,id=""):
+def testcase_10(drivers,checkcoupon=0,coupon=0,tax=0,istax=0,sub=0,id="",coupon_code=0):
     # testing the finite plan without tax and coupon 
     username=Create_username
     email= u_email
-    coupon_code= onetimecoupon
+    print(coupon_code)
+    if coupon_code==0:
+        print("inside this")
+        coupon_code= onetimecoupon
     plan_amount=finite_plan_amount
     drivers.get(BASE_URL+"/setup")
     time.sleep(2)
@@ -335,8 +338,8 @@ def testcase_15(drivers):
 
 def testcase_16(drivers): 
     # Testing the subscription no trial plan with no coupon and tax
-    testcase_10(drivers,2,0,0,0,1,"arm_subscription_plan_option_3")
-    plan_amount=subscription_plan_amount
+    testcase_10(drivers,2,0,0,0,1,path_noTrialPlan)
+    plan_amount=subscription_no_trial_plan_amount
     discount_amount = validate.calculation(plan_amount,coupon=0,tax=0,istax=0)
     print(discount_amount)
     result,test =helpingfun.payment_history(drivers,discount_amount[0])
@@ -344,6 +347,57 @@ def testcase_16(drivers):
     logging.info(f"second parameter form payment {test}")
     # This is for checking the subscription created amount
     result1,created_sub_amount = validate.varify_subscription_amount(test,plan_amount)
+    compressive_result = result + result1
+    logging.info(f"Result form payment {result1}")
+    logging.info(f"second parameter form payment {created_sub_amount}")
+    return result,created_sub_amount
+def testcase_17(drivers): 
+    # Testing the subscription no trial plan with one time coupon and tax
+    
+    testcase_10(drivers,1,0,0,0,1,path_noTrialPlan,onetimecoupon)
+    plan_amount=subscription_no_trial_plan_amount
+    discount_amount = validate.calculation(plan_amount,coupon=50,tax=0,istax=0)
+    print(discount_amount)
+    result,test =helpingfun.payment_history(drivers,discount_amount[0])
+    logging.info(f"Result form payment {result}")
+    logging.info(f"second parameter form payment {test}")
+    # This is for checking the subscription created amount
+    result1,created_sub_amount = validate.varify_subscription_amount(test,plan_amount)
+    compressive_result = result + result1
+    logging.info(f"Result form payment {result1}")
+    logging.info(f"second parameter form payment {created_sub_amount}")
+    return result,created_sub_amount
+def testcase_18(drivers): 
+    # Testing the subscription no trial plan with recurring time coupon and no tax
+    
+    testcase_10(drivers,1,0,0,0,1,path_noTrialPlan,recurring_coupon)
+    plan_amount=subscription_no_trial_plan_amount
+    discount_amount = validate.calculation(plan_amount,coupon=50,tax=0,istax=0)
+    print(discount_amount)
+    result,test =helpingfun.payment_history(drivers,discount_amount[0])
+    logging.info(f"Result form payment {result}")
+    logging.info(f"second parameter form payment {test}")
+    # This is for checking the subscription created amount
+    plan_amount = validate.calculation(plan_amount,coupon=50,tax=0,istax=0)
+    result1,created_sub_amount = validate.varify_subscription_amount(test,plan_amount[0])
+    compressive_result = result + result1
+    logging.info(f"Result form payment {result1}")
+    logging.info(f"second parameter form payment {created_sub_amount}")
+    return result,created_sub_amount
+
+def testcase_19(drivers): 
+    # Testing the subscription no trial plan with no coupon and excluded tax
+    
+    testcase_10(drivers,2,0,0,0,1,path_noTrialPlan)
+    plan_amount=subscription_no_trial_plan_amount
+    discount_amount = validate.calculation(plan_amount,coupon=0,tax=10,istax=2)
+    print(discount_amount)
+    result,test =helpingfun.payment_history(drivers,discount_amount[0])
+    logging.info(f"Result form payment {result}")
+    logging.info(f"second parameter form payment {test}")
+    # This is for checking the subscription created amount
+    plan_amount = validate.calculation(plan_amount,coupon=0,tax=10,istax=2)
+    result1,created_sub_amount = validate.varify_subscription_amount(test,plan_amount[0])
     compressive_result = result + result1
     logging.info(f"Result form payment {result1}")
     logging.info(f"second parameter form payment {created_sub_amount}")

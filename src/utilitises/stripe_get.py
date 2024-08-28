@@ -26,21 +26,19 @@ def get_subscription_amount(charge_id):
 
     # Assume there's only one upcoming subscription schedule per customer
     schedule = schedules.data[0]
+    subscription_id = schedule.subscription
+
+    upcoming_invoice = stripe.Invoice.upcoming(
+    customer=customer_id,
+    subscription=subscription_id
+)
+    amount_due = upcoming_invoice['amount_due']
+    
+    amount = amount_due/100
+    print(f"Amount Due: {amount_due/100} {upcoming_invoice['currency'].upper()}")  # Amount is in cents
 
     # Step 4: Get the details of the first phase (upcoming phase)
-    phase = schedule.phases[0]
-
-    # Get the first item in the phase
-    item = phase['items'][0]
-
-    # Step 5: Retrieve the price details using the plan ID (which is a price object in your case)
-    price_id = item['price']  # This is the ID of the plan/price
-    price = stripe.Price.retrieve(price_id)
-
-    # Get the subscription amount
-    amount = price['unit_amount']/100
-
-    print(f"Plan ID: {price_id}")
-    print(f"Amount: {amount/100} {price['currency'].upper()}")  # Amount is in cents
+    subscription_id = schedule.subscription
     return amount
 
+get_subscription_amount("ch_3PsoDW00YaJGfbxs0yUfTLkc")
